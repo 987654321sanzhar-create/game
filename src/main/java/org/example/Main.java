@@ -5,6 +5,6 @@ package org.example;
 public class Main {
     static void main() {
         System.out.println("Ыфтофк");
-
+        System.out.println("лвирва");
     }
 }
