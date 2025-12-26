@@ -4,7 +4,23 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        System.out.println("Ыфтофк");
-        System.out.println("лвирва");
+
+
+int[] arr = {12,43,77,34,22,99};
+int n = 22;
+        System.out.println(countEven(arr,n));
+
+    }
+    public static boolean countEven(int[] arr,int n ){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == n) {
+                return true;
+            }
+        }
+        return false;
     }
 }
+
+
+
+
