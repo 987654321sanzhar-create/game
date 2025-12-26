@@ -1,26 +1,48 @@
 package org.example;
 
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
+        boolean eqyit;
 
 
-int[] arr = {12,43,77,34,22,99};
-int n = 22;
-        System.out.println(countEven(arr,n));
+        while (true) {
+            Scanner s = new Scanner(System.in);
+            System.out.println("Введите параметры!!");
+            int num = s.nextInt();
+            char ch = s.next().charAt(0);
+            int num1 = s.nextInt();
+            System.out.println( calculeyt(num,num1,ch));
 
-    }
-    public static boolean countEven(int[] arr,int n ){
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == n) {
-                return true;
-            }
+
         }
-        return false;
+    }
+    public static int calculeyt(int num,int num1, char ch){
+        switch (ch){
+            case '+':
+                System.out.println(num + num1);
+                break;
+
+            case '-':
+                System.out.println(num - num1);
+                break;
+
+            case '*':
+                System.out.println(num * num1);
+                break;
+
+            case '/':
+                System.out.println(num / num1);
+                break;
+            default:
+                System.out.println("введите корректный символ!");
+        }
+        return 0;
     }
 }
-
 
 
 
