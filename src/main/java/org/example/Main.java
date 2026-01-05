@@ -9,7 +9,8 @@ public class Main {
     static int totalAnswer = 0;
     static int totalCorreckt = 0;
     static int ball = 0;
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Random r = new Random();
         Scanner s = new Scanner(System.in);
 
@@ -31,26 +32,33 @@ public class Main {
                     playRaundPlus(r, s);
                     break;
                 case 2:
-                    playRaundMinus(r,s);
+                    playRaundMinus(r, s);
                     break;
                 case 3:
-                    multiplication(r,s);
+                    multiplication(r, s);
                     break;
                 case 4:
-                    division(r,s);
+                    division(r, s);
                     break;
                 case 5:
-                    mixed(r,s);
+                    mixed(r, s);
                     break;
                 case 6:
                     statisticks();
                     break;
+                case 7:
+                    System.out.println("=== ИГРА ОКОНЧЕНА ===");
+                    System.out.println(" ");
+                statisticks();
+                return;5
+
             }
 
         }
     }
 
-    public static int playRaundPlus(Random r, Scanner s) {;
+    public static int playRaundPlus(Random r, Scanner s) {
+        ;
         System.out.print("Сколько примеров решить? ");
         int count = s.nextInt();
         boolean[] results = new boolean[count];
@@ -64,37 +72,40 @@ public class Main {
             if (Answer == correct) {
                 results[i] = true;
                 totalCorreckt++;
-                ball+= 10;
+                ball += 10;
                 System.out.println("Правельно + 10 баллов!!!");
             } else {
                 results[i] = false;
                 System.out.println("неправельно!!!");
-                System.out.println(a + " + " + b + " = "+correct);
+                System.out.println(a + " + " + b + " = " + correct);
                 System.out.println(" ");
             }
 
         }
         System.out.println("=== РЕЗУЛЬТАТ РАУНДА ===");
         for (int i = 0; i < results.length; i++) {
-            if (results[i] == true){
-                System.out.println("Пример "+(i + 1)+" (+10 ,баллов)");
-            }else {
-                System.out.println("Пример "+(i + 1)+" (0 ,баллов)");
+            if (results[i] == true) {
+                System.out.println("Пример " + (i + 1) + " (+10 ,баллов)");
+            } else {
+                System.out.println("Пример " + (i + 1) + " (0 ,баллов)");
             }
         }
-        System.out.println("у вас всего "+ball+" баллов");
+        System.out.println("у вас всего " + ball + " баллов");
         return 0;
     }
-    public static void statisticks(){
-        int prochent = 0;
-        System.out.println("Всего решено примеров "+totalAnswer);
-        System.out.println("Правельных ответов "+totalCorreckt);
-            prochent =(int)((double) totalCorreckt / totalAnswer * 100);
 
-        System.out.println("Процент правельных ответов "+prochent);
-        System.out.println("Общий счот "+ball);
+    public static void statisticks() {
+        int prochent = 0;
+        System.out.println("Всего решено примеров " + totalAnswer);
+        System.out.println("Правельных ответов " + totalCorreckt);
+        prochent = (int) ((double) totalCorreckt / totalAnswer * 100);
+
+        System.out.println("Процент правельных ответов " + prochent);
+        System.out.println("Общий счот " + ball);
     }
-    public static int playRaundMinus(Random r, Scanner s) {;
+
+    public static int playRaundMinus(Random r, Scanner s) {
+        ;
         System.out.print("Сколько примеров решить? ");
         int count = s.nextInt();
         boolean[] results = new boolean[count];
@@ -108,28 +119,30 @@ public class Main {
             if (Answer == correct) {
                 results[i] = true;
                 totalCorreckt++;
-                ball+= 10;
+                ball += 10;
                 System.out.println("Правельно + 10 баллов!!!");
             } else {
                 results[i] = false;
                 System.out.println("неправельно!!!");
-                System.out.println(a + " + " + b + " = "+correct);
+                System.out.println(a + " + " + b + " = " + correct);
                 System.out.println(" ");
             }
 
         }
         System.out.println("=== РЕЗУЛЬТАТ РАУНДА ===");
         for (int i = 0; i < results.length; i++) {
-            if (results[i] == true){
-                System.out.println("Пример "+(i + 1)+" (+10 ,баллов)");
-            }else {
-                System.out.println("Пример "+(i + 1)+" (0 ,баллов)");
+            if (results[i] == true) {
+                System.out.println("Пример " + (i + 1) + " (+10 ,баллов)");
+            } else {
+                System.out.println("Пример " + (i + 1) + " (0 ,баллов)");
             }
         }
-        System.out.println("у вас всего "+ball+" баллов");
+        System.out.println("у вас всего " + ball + " баллов");
         return 0;
     }
-    public static int multiplication(Random r, Scanner s) {;
+
+    public static int multiplication(Random r, Scanner s) {
+        ;
         System.out.print("Сколько примеров решить? ");
         int count = s.nextInt();
         boolean[] results = new boolean[count];
@@ -143,136 +156,124 @@ public class Main {
             if (Answer == correct) {
                 results[i] = true;
                 totalCorreckt++;
-                ball+= 10;
+                ball += 10;
                 System.out.println("Правельно + 10 баллов!!!");
             } else {
                 results[i] = false;
                 System.out.println("неправельно!!!");
-                System.out.println(a + " + " + b + " = "+correct);
+                System.out.println(a + " + " + b + " = " + correct);
                 System.out.println(" ");
             }
 
         }
         System.out.println("=== РЕЗУЛЬТАТ РАУНДА ===");
         for (int i = 0; i < results.length; i++) {
-            if (results[i] == true){
-                System.out.println("Пример "+(i + 1)+" (+10 ,баллов)");
-            }else {
-                System.out.println("Пример "+(i + 1)+" (0 ,баллов)");
+            if (results[i] == true) {
+                System.out.println("Пример " + (i + 1) + " (+10 ,баллов)");
+            } else {
+                System.out.println("Пример " + (i + 1) + " (0 ,баллов)");
             }
         }
-        System.out.println("у вас всего "+ball+" баллов");
+        System.out.println("у вас всего " + ball + " баллов");
         return 0;
     }
-    public static int division(Random r, Scanner s) {;
+
+    public static int division(Random r, Scanner s) {
+        ;
         System.out.print("Сколько примеров решить? ");
         int count = s.nextInt();
         boolean[] results = new boolean[count];
         for (int i = 0; i < count; i++) {
-            int a = r.nextInt(1, 10);
             int b = r.nextInt(1, 10);
-            System.out.print("Пример " + (i + 1) + ":" + a + " / " + b + " = ");
+            int a = b * r.nextInt(1, 10);
+            System.out.print("Пример " + (i + 1) + ": " + a + " / " + b + " = ");
             int Answer = s.nextInt();
             totalAnswer++;
-            int correct = a / b;
+            int  correct =  a / b;
             if (Answer == correct) {
                 results[i] = true;
                 totalCorreckt++;
-                ball+= 10;
+                ball += 10;
                 System.out.println("Правельно + 10 баллов!!!");
             } else {
                 results[i] = false;
                 System.out.println("неправельно!!!");
-                System.out.println(a + " + " + b + " = "+correct);
+                System.out.println(a + " + " + b + " = " + correct);
                 System.out.println(" ");
             }
 
         }
         System.out.println("=== РЕЗУЛЬТАТ РАУНДА ===");
         for (int i = 0; i < results.length; i++) {
-            if (results[i] == true){
-                System.out.println("Пример "+(i + 1)+" (+10 ,баллов)");
-            }else {
-                System.out.println("Пример "+(i + 1)+" (0 ,баллов)");
+            if (results[i]) {
+                System.out.println("Пример " + (i + 1) + " (+10 ,баллов)");
+            } else {
+                System.out.println("Пример " + (i + 1) + " (0 ,баллов)");
             }
         }
-        System.out.println("у вас всего "+ball+" баллов");
+        System.out.println("у вас всего " + ball + " баллов");
         return 0;
     }
-    public static void mixed(Random r,Scanner s) {
+
+    public static void mixed(Random r, Scanner s) {
         System.out.print("Сколько примеров решить? ");
         int count = s.nextInt();
         boolean[] results = new boolean[count];
+
         for (int i = 0; i < count; i++) {
             int a = r.nextInt(1, 10);
             int b = r.nextInt(1, 10);
             int num = r.nextInt(1, 5);
-            boolean[] resulte = new boolean[count];
-            if (num == 1) {
-                System.out.print("Пример " + (i + 1) + ":" + a + " + " + b + " = ");
-                int answer = s.nextInt();
-                int correct = a + b;
-                totalAnswer++;
-                if (answer == correct) {
-                    totalCorreckt++;
-                    results[i] = (answer == a + b);
-                    System.out.println("Правельно!!! +10 бфллов");
-                } else {
-                    results[i] = false;
-                    System.out.println("не правельно!!!");
-                }
 
-            } else if (num == 2) {
-                System.out.print("Пример " + (i + 1) + ":" + a + " - " + b + " = ");
-                int answer = s.nextInt();
-                int correct = a - b;
-                totalAnswer++;
-                if (answer == correct) {
-                    totalCorreckt++;
-                    results[i] = (answer == a - b);
-                    System.out.println("Правельно!!! +10 бфллов");
-                } else {
-                    results[i] = false;
-                    System.out.println("не правельно!!!");
+            int correct = 0;
+            String sign = "";
+
+            switch (num) {
+                case 1 -> {
+                    correct = a + b;
+                    sign = "+";
                 }
-            } else if (num == 3) {
-                System.out.print("Пример " + (i + 1) + ":" + a + " * " + b + " = ");
-                int answer = s.nextInt();
-                int correct = a * b;
-                totalAnswer++;
-                if (answer == correct) {
-                    totalCorreckt++;
-                    results[i] = (answer == a * b);
-                    System.out.println("Правельно!!! +10 бфллов");
-                } else {
-                    results[i] = false;
-                    System.out.println("не правельно!!!");
+                case 2 -> {
+                    correct = a - b;
+                    sign = "-";
                 }
-            } else if (num == 4) {
-                System.out.print("Пример " + (i + 1) + ":" + a + " / " + b + " = ");
-                int answer = s.nextInt();
-                int correct = a / b;
-                totalAnswer++;
-                if (answer == correct) {
-                    totalCorreckt++;
-                    results[i] = (answer == a / b);
-                    System.out.println("Правельно!!! +10 бфллов");
-                } else {
-                    results[i] = false;
-                    System.out.println("не правельно!!!");
+                case 3 -> {
+                    correct = a * b;
+                    sign = "*";
+                }
+                case 4 -> {
+                    correct = a / b;
+                    sign = "/";
                 }
             }
-        }
-            System.out.println("=== РЕЗУЛЬТАТ РАУНДА ===");
-            for (int i = 0; i < results.length; i++) {
-                if (results[i] == true) {
-                    System.out.println("Пример " + (i + 1) + " (+10 ,баллов)");
-                } else {
-                    System.out.println("Пример " + (i + 1) + " (0 ,баллов)");
-                }
+
+            System.out.print("Пример " + (i + 1) + ": " + a + " " + sign + " " + b + " = ");
+            int answer = s.nextInt();
+
+            totalAnswer++;
+
+            if (answer == correct) {
+                totalCorreckt++;
+                ball += 10;
+                results[i] = true;
+                System.out.println("Правильно! +10 баллов");
+            } else {
+                results[i] = false;
+                System.out.println("Неправильно! Ответ: " + correct);
             }
-            System.out.println("у вас всего " + ball + " баллов");
         }
+
+        System.out.println("=== РЕЗУЛЬТАТ РАУНДА ===");
+        for (int i = 0; i < results.length; i++) {
+           if (results[i]){
+               System.out.println("Пример "+(i + 1)+": (+10 ,баллов)");
+           }else {
+               System.out.println("Пример "+(i + 1)+": (0 ,баллов)");
+           }
+        }
+        System.out.println("У вас всего " + ball + " баллов");
+    }
+}
 
 
 
